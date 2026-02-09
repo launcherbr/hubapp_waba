@@ -6,7 +6,7 @@ if (!defined("WHMCS")) die("Access Denied");
 
 /**
  * HubApp WABA Client - Conexão API Oficial Meta
- * Versão 1.0.8: Com tratamento para erro 132018 (parâmetros de linha única)
+ * Versão 1.0.9: Com tratamento para erro 132018 (parâmetros de linha única)
  */
 class HubAppWabaClient {
 
