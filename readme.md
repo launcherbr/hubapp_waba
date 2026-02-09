@@ -59,7 +59,7 @@ Para garantir a aprovação e o funcionamento:
 | `fatura_atrasada_2` | ⚠️ Oi {{1}}, o pagamento da fatura #{{2}} (vencida em {{3}}) ainda não foi identificado. Utilize o link {{4}} para concluir o acerto. | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://exemplo.com/f |
 | `aviso_suspensao` | ❌ ATENÇÃO {{1}}! A fatura #{{2}} (vencida em {{3}}) está com atraso crítico. Regularize agora pelo link {{4}} para manter seu serviço ativo. | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://exemplo.com/f |
 | `ticket_resposta` | Olá {{1}}, o seu ticket de suporte "{{2}}" recebeu uma nova resposta. Você pode visualizar os detalhes no link {{3}} agora mesmo. | {{1}}: João, {{2}}: Erro no Site, {{3}}: https://exemplo.com/t |
-| `admin_novo_ticket` | Alerta Admin: Um novo ticket com o assunto "{{1}}" foi aberto por {{2}}. A prioridade definida é {{3}}. | {{1}}: Erro no Site, {{2}}: João Silva, {{3}}: Alta |
+| `admin_novo_ticket` | Alerta Admin: Um novo ticket com o assunto "{{1}}" foi aberto por {{2}}. A prioridade definida é {{3}}. Consulte sua área adminstrativa. | {{1}}: Erro no Site, {{2}}: João Silva, {{3}}: Alta |
 | `admin_login` | Segurança: O usuário administrador {{1}} realizou um novo acesso ao painel do WHMCS neste momento. | {{1}}: admin_xyz |
 | `servico_ativo` | Tudo pronto {{1}}! O seu serviço {{2}} foi ativado com sucesso. Seu usuário é {{3}} e a senha definida é {{4}}. Guarde seus dados. | {{1}}: João, {{2}}: meusite.com, {{3}}: joao_user, {{4}}: senha123 |
 | `dominio_alerta` | Olá {{1}}, seu domínio {{2}} expira em {{3}} dias, na data {{4}}. Renove agora para garantir a titularidade. | {{1}}: João, {{2}}: meusite.com, {{3}}: 5, {{4}}: 20/02/2026 |
