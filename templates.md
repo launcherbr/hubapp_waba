@@ -1,56 +1,34 @@
-# 📝 Guia de Modelos HubApp WABA
+# 📝 Guia de Modelos HubApp WABA (Versão Anti-Rejeição Final)
 
-Este guia detalha a configuração visual e estrutural necessária no **Gerenciador de Negócios da Meta** para que as automações do WHMCS funcionem corretamente.
+Este guia contém os textos corrigidos para cadastro na Meta. Todos os modelos terminam com **texto fixo** após a última variável para garantir a aprovação na categoria **Utilidade**.
 
 ---
 
 ## 🏛️ Estrutura Global (Branding)
-Para todos os templates onde o módulo estiver configurado com **Header** e **Footer** ativos, utilize:
-
-* **Cabeçalho (Header):** Tipo "Texto". Conteúdo: `LD | HubApp`
-* **Rodapé (Footer):** Conteúdo: `LD | HubApp - Launcher & Co.`
+* **Cabeçalho (Header):** Texto: `LD | HubApp`
+* **Rodapé (Footer):** Texto: `LD | HubApp - Launcher & Co.`
 
 ---
 
-## 📋 Definição dos Modelos e Amostras (Utility)
+## 📋 Modelos para Cadastro na Meta
 
-Configure todos os modelos abaixo na categoria **Utilidade (Utility)**. Ao enviar para aprovação, utilize as amostras sugeridas para evitar rejeições.
-
-### 1. Faturamento e Cobrança
-As variáveis devem seguir a ordem exata para que o `hooks.php` preencha os dados corretamente.
-
-| Nome do Template | Texto Sugerido (Corpo) | Amostras (Samples) para Aprovação |
+| Nome do Template | Texto Sugerido (Corpo do Template) | Amostras (Samples) |
 | :--- | :--- | :--- |
-| `fatura_gerada` | Olá {{1}}, sua fatura #{{2}} no valor de R$ {{3}} foi gerada com vencimento em {{4}}. Link: {{5}} | {{1}}: João, {{2}}: 1050, {{3}}: 59.90, {{4}}: 15/02/2026, {{5}}: https://exemplo.com/fatura |
-| `fatura_paga` | Obrigado {{1}}! Confirmamos o pagamento da fatura #{{2}}. Seus serviços seguem ativos. | {{1}}: João, {{2}}: 1050 |
-| `fatura_atrasada_1` | ⚠️ Olá {{1}}, lembramos que a fatura #{{2}} venceu em {{3}}. Para evitar suspensão, pague em: {{4}} | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://exemplo.com/fatura |
-| `fatura_atrasada_2` | ⚠️ Oi {{1}}, o pagamento da fatura #{{2}} (vencida em {{3}}) ainda não consta. Precisa de ajuda? Link: {{4}} | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://exemplo.com/fatura |
-| `aviso_suspensao` | ❌ ATENÇÃO {{1}}! A fatura #{{2}} (vencimento {{3}}) está com atraso crítico. Pague agora para evitar bloqueio: {{4}} | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://exemplo.com/fatura |
-
-### 🛠️ Suporte e Administração
-| Nome do Template | Texto Sugerido (Corpo) | Amostras (Samples) para Aprovação |
-| :--- | :--- | :--- |
-| `ticket_resposta` | Olá {{1}}, seu ticket "{{2}}" recebeu uma nova resposta. Acesse para ler: {{3}} | {{1}}: João, {{2}}: Erro no Site, {{3}}: https://exemplo.com/ticket |
-| `admin_novo_ticket` | Alerta Admin: Novo ticket "{{1}}" aberto por {{2}}. Prioridade: {{3}}. | {{1}}: Erro no Site, {{2}}: João Silva, {{3}}: Alta |
-| `admin_login` | Segurança: O usuário {{1}} acabou de acessar o painel administrativo do WHMCS. | {{1}}: administrador_xyz |
-
-### 📦 Entrega e Domínios
-| Nome do Template | Texto Sugerido (Corpo) | Amostras (Samples) para Aprovação |
-| :--- | :--- | :--- |
-| `servico_ativo` | Tudo pronto {{1}}! Seu serviço {{2}} foi ativado. User: {{3}} / Senha: {{4}} | {{1}}: João, {{2}}: meusite.com, {{3}}: joao_user, {{4}}: senha123 |
-| `dominio_alerta` | Olá {{1}}, seu domínio {{2}} expira em {{3}} dias ({{4}}). Renove agora para não perder a titularidade. | {{1}}: João, {{2}}: meusite.com, {{3}}: 5, {{4}}: 20/02/2026 |
-
-### 💬 Envio Manual
-| Nome do Template | Texto Sugerido (Corpo) | Amostras (Samples) para Aprovação |
-| :--- | :--- | :--- |
-| `aviso_geral` | Aviso importante da HubApp: {{1}}. Em caso de dúvidas, fale conosco. | {{1}}: O sistema passará por manutenção às 22h. |
+| `fatura_gerada` | Olá {{1}}, sua fatura #{{2}} no valor de R$ {{3}} foi gerada com vencimento em {{4}}. Você pode acessar seu boleto no link {{5}} para realizar o pagamento agora. | {{1}}: João, {{2}}: 1050, {{3}}: 59.90, {{4}}: 15/02/2026, {{5}}: https://sua.loja/f |
+| `fatura_paga` | Obrigado {{1}}! Confirmamos o recebimento do pagamento referente à fatura #{{2}} com sucesso em nosso sistema. | {{1}}: João, {{2}}: 1050 |
+| `fatura_atrasada` | ⚠️ Olá {{1}}, lembramos que a fatura #{{2}} venceu em {{3}}. Pedimos que regularize através do link {{4}} para evitar suspensões em sua conta. | {{1}}: João, {{2}}: 1050, {{3}}: 10/02/2026, {{4}}: https://sua.loja/f |
+| `ticket_resposta` | Olá {{1}}, o seu ticket de suporte "{{2}}" recebeu uma nova resposta. Você pode visualizar os detalhes no link {{3}} para acompanhar o atendimento. | {{1}}: João, {{2}}: Erro no Site, {{3}}: https://sua.loja/t |
+| `servico_ativo` | Boas notícias {{1}}! O seu novo plano para {{2}} já está liberado. Você pode conferir as instruções e dados de acesso no link {{3}} de forma segura. | {{1}}: João, {{2}}: meusite.com, {{3}}: https://sua.loja/s |
+| `servico_suspenso` | Olá {{1}}, informamos que o seu serviço {{2}} foi temporariamente suspenso. Para entender o motivo e reativar sua conta, acesse o link {{3}} imediatamente. | {{1}}: João, {{2}}: meusite.com, {{3}}: https://sua.loja/s |
+| `dominio_expirando` | Prezado(a) {{1}}, o domínio {{2}} expira em {{3}} dias, na data {{4}}. Para evitar que seu site fique fora do ar, renove pelo link {{5}} o quanto antes. | {{1}}: João, {{2}}: meusite.com, {{3}}: 5, {{4}}: 20/02/2026, {{5}}: https://sua.loja/d |
+| `admin_novo_ticket` | Alerta Admin: Um novo ticket com o assunto "{{1}}" foi aberto por {{2}}. A prioridade definida para este atendimento é {{3}} no momento. | {{1}}: Erro no Site, {{2}}: João Silva, {{3}}: Alta |
+| `admin_login` | Segurança: O usuário administrador {{1}} realizou um novo acesso ao painel de gestão do WHMCS através deste dispositivo. | {{1}}: admin_xyz |
+| `aviso_geral` | Comunicado HubApp: {{1}}. Caso tenha qualquer dúvida sobre esta informação, entre em contato com nosso suporte oficial. | {{1}}: Teremos uma manutenção programada hoje. |
 
 ---
 
-## ⚠️ Regras de Segurança (Anti-Rejeição)
+## ⚠️ Regras Cruciais de Cadastro
 
-1.  **Variáveis Abraçadas**: Nunca deixe uma variável no início ou fim absoluto.
-    * ❌ `{{1}}, como vai?`
-    * ✅ `Olá {{1}}, como vai?`
-2.  **Limpeza Automática**: O módulo remove quebras de linha (`\n`) das variáveis. Se desejar quebras de linha na mensagem, insira-as diretamente no texto fixo do template no Gerenciador da Meta.
-3.  **Links**: Se o template contiver links, forneça o link completo do seu WHMCS na amostra de aprovação.
+1. **Variáveis no Fim**: Note que todos os modelos acima terminam com palavras como "...agora", "...no momento" ou "...dispositivo". O ponto final sozinho após a variável causa rejeição.
+2. **Nomes dos Templates**: Use exatamente os nomes da coluna "Nome do Template" para que o mapeamento no WHMCS funcione.
+3. **Links**: Sempre inclua um link real nas amostras de aprovação para que a Meta valide a categoria Utilidade.

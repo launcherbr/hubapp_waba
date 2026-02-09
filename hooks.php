@@ -1,7 +1,7 @@
 <?php
 /**
  * HubApp WABA WHMCS - Hooks Oficiais
- * Versão: 1.0.7
+ * Versão: 1.0.9
  * Mapeamento de 12 templates com suporte a Header/Footer fixos.
  */
 
@@ -119,7 +119,7 @@ add_hook('AfterModuleCreate', 1, function($vars) {
 });
 
 // 10. Serviço Suspenso
-// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Link da Fatura/Serviço
+// Variáveis: {{1}} Nome, {{2}} Domínio
 add_hook('AfterModuleSuspend', 1, function($vars) {
     $p = $vars['params'];
     $firstName = Capsule::table('tblclients')->where('id', $p['userid'])->value('firstname');
@@ -138,14 +138,16 @@ add_hook('AfterModuleSuspend', 1, function($vars) {
 add_hook('DomainRenewalNotice', 1, function($vars) {
     $dom = Capsule::table('tbldomains')->where('id', $vars['domainid'])->first();
     $cli = Capsule::table('tblclients')->where('id', $dom->userid)->first();
+    
+    // Busca a URL do sistema para montar o link de renovação
     $systemUrl = Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value');
-    $renewalUrl = rtrim($systemUrl, '/') . "/cart.php?a=view"; // Link do carrinho/renovação
+    $renewalUrl = rtrim($systemUrl, '/') . "/cart.php?a=view"; 
 
     waba_dispatch('DomainRenewalNotice', $cli->id, [
-        $cli->firstname, 
-        $dom->domain, 
-        $vars['daysuntilexpiry'], 
-        fromMySQLDate($dom->expirydate),
-        $renewalUrl
+        $cli->firstname,               // {{1}}
+        $dom->domain,                  // {{2}}
+        $vars['daysuntilexpiry'],      // {{3}}
+        fromMySQLDate($dom->expirydate), // {{4}}
+        $renewalUrl                    // {{5}}
     ]);
 });
