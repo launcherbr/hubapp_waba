@@ -102,15 +102,19 @@ add_hook('AdminLogin', 1, function($vars) {
 });
 
 // 9. Serviço Ativado
-// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Usuário, {{4}} Senha
+// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Link do Serviço
 add_hook('AfterModuleCreate', 1, function($vars) {
     $p = $vars['params'];
     $firstName = Capsule::table('tblclients')->where('id', $p['userid'])->value('firstname');
+    
+    // Monta o link direto para a página do produto no WHMCS
+    $systemUrl = Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value');
+    $serviceUrl = rtrim($systemUrl, '/') . "/clientarea.php?action=productdetails&id=" . $p['serviceid'];
+
     waba_dispatch('AfterModuleCreate', $p['userid'], [
         $firstName, 
         $p['domain'], 
-        $p['username'], 
-        $p['password']
+        $serviceUrl
     ]);
 });
 
