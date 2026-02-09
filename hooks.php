@@ -119,22 +119,33 @@ add_hook('AfterModuleCreate', 1, function($vars) {
 });
 
 // 10. Serviço Suspenso
-// Variáveis: {{1}} Nome, {{2}} Domínio
+// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Link da Fatura/Serviço
 add_hook('AfterModuleSuspend', 1, function($vars) {
     $p = $vars['params'];
     $firstName = Capsule::table('tblclients')->where('id', $p['userid'])->value('firstname');
-    waba_dispatch('AfterModuleSuspend', $p['userid'], [$firstName, $p['domain']]);
+    $systemUrl = Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value');
+    $serviceUrl = rtrim($systemUrl, '/') . "/clientarea.php?action=productdetails&id=" . $p['serviceid'];
+
+    waba_dispatch('AfterModuleSuspend', $p['userid'], [
+        $firstName, 
+        $p['domain'], 
+        $serviceUrl
+    ]);
 });
 
 // 11. Expiração de Domínio
-// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Dias, {{4}} Data
+// Variáveis: {{1}} Nome, {{2}} Domínio, {{3}} Dias, {{4}} Data, {{5}} Link
 add_hook('DomainRenewalNotice', 1, function($vars) {
     $dom = Capsule::table('tbldomains')->where('id', $vars['domainid'])->first();
     $cli = Capsule::table('tblclients')->where('id', $dom->userid)->first();
+    $systemUrl = Capsule::table('tblconfiguration')->where('setting', 'SystemURL')->value('value');
+    $renewalUrl = rtrim($systemUrl, '/') . "/cart.php?a=view"; // Link do carrinho/renovação
+
     waba_dispatch('DomainRenewalNotice', $cli->id, [
         $cli->firstname, 
         $dom->domain, 
         $vars['daysuntilexpiry'], 
-        fromMySQLDate($dom->expirydate)
+        fromMySQLDate($dom->expirydate),
+        $renewalUrl
     ]);
 });
