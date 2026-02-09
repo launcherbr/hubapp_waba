@@ -61,7 +61,7 @@ Para garantir a aprovação e o funcionamento:
 | `ticket_resposta` | Olá {{1}}, o seu ticket de suporte "{{2}}" recebeu uma nova resposta. Você pode visualizar os detalhes no link {{3}} agora mesmo. | {{1}}: João, {{2}}: Erro no Site, {{3}}: https://exemplo.com/t |
 | `admin_novo_ticket` | Alerta Admin: Um novo ticket com o assunto "{{1}}" foi aberto por {{2}}. A prioridade definida é {{3}}. Consulte sua área administrativa. | {{1}}: Erro no Site, {{2}}: João Silva, {{3}}: Alta |
 | `admin_login` | Segurança: O usuário administrador {{1}} realizou um novo acesso ao painel do WHMCS neste momento. | {{1}}: admin_xyz |
-| `servico_ativo` | Boas notícias {{1}}! O seu serviço {{2}} já está ativo e pronto para uso. Você pode conferir os dados de acesso e o guia de configuração no link {{3}}. Seja bem-vindo!. | {{1}}: João, {{2}}: meusite.com, {{3}}: https://exemplo.com/f |
+| `servico_ativo` | Boas notícias {{1}}! O seu serviço {{2}} já está ativo e pronto para uso. Você pode conferir os dados de acesso e o guia de configuração no link {{3}}. Seja bem-vindo!. | {{1}}: João, {{2}}: meusite.com, {{3}}: https://exemplo.com/s |
 | `dominio_alerta` | Olá {{1}}, seu domínio {{2}} expira em {{3}} dias, na data {{4}}. Renove agora para garantir a titularidade. | {{1}}: João, {{2}}: meusite.com, {{3}}: 5, {{4}}: 20/02/2026 |
 | `aviso_geral` | Comunicado HubApp: {{1}}. Caso tenha qualquer dúvida sobre esta informação, por favor, entre em contato. | {{1}}: Teremos uma manutenção programada hoje. |
 
