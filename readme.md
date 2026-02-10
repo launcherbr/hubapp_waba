@@ -48,6 +48,18 @@ Ao configurar seus templates na Meta, as variáveis `{{n}}` receberão os seguin
 
 ---
 
+---
+
+## 💎 Recomendado para seu WHMCS
+
+> **TENHA SEU WHMCS VERIFICADO**
+>
+> Garanta mais credibilidade e segurança para o seu sistema por apenas **R$ 250,00 anuais**.
+>
+> [**👉 CLIQUE AQUI PARA CONTRATAR AGORA**](https://licencas.digital/store/whmcs/whmcs-verificado)
+
+---
+
 ## 🆘 Suporte e Documentação de Modelos
 
 * **Modelos de Texto**: Veja o arquivo `TEMPLATES.md` para sugestões de textos anti-rejeição.
