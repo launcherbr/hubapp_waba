@@ -50,7 +50,7 @@ function hubapp_waba_config() {
             "use_header" => ["FriendlyName" => "Ativar Header", "Type" => "yesno"],
             "header_text" => ["FriendlyName" => "Texto Header", "Type" => "text", "Default" => "LD | HubApp"],
             "use_footer" => ["FriendlyName" => "Ativar Footer", "Type" => "yesno"],
-            "footer_text" => ["FriendlyName" => "Texto Footer", "Type" => "text", "Default" => "LD | HubApp - Launcher & Co."],
+            "footer_text" => ["FriendlyName" => "Texto Footer", "Type" => "text", "Default" => "LD | HubApp - Launcher"],
             "manual_template" => ["FriendlyName" => "Template Manual/Teste", "Type" => "text", "Description" => "Nome do template aprovado na Meta."],
             
             // NOVO CAMPO: Seletor de Tecnologia de Login
