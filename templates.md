@@ -6,7 +6,7 @@ Este guia contém os textos validados para cadastro na Meta. Todos os modelos te
 
 ## 🏛️ Estrutura Global (Branding)
 * **Cabeçalho (Header):** Texto: `LD | HubApp`
-* **Rodapé (Footer):** Texto: `LD | HubApp - Launcher & Co.`
+* **Rodapé (Footer):** Texto: `LD | HubApp - Launcher.`
 
 ---
 
