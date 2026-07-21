@@ -48,7 +48,7 @@ As variáveis `{{n}}` cadastradas na Meta receberão os seguintes dados vindos d
 
 ## 🛠️ Configuração Rápida
 
-1. **Endpoint**: `https://graph.facebook.com/v24.0/ID_DO_NUMERO/`
+1. **Endpoint**: `https://graph.facebook.com/v25.0/ID_DO_NUMERO/`
 2. **Token**: Insira o Token de Acesso Permanente da Meta.
 3. **Mapeamento**: No painel do addon, insira os nomes dos templates conforme aprovados na Meta (ex: `fatura_gerada`).
 
@@ -67,5 +67,5 @@ As variáveis `{{n}}` cadastradas na Meta receberão os seguintes dados vindos d
 ## 🆘 Suporte e Documentação de Modelos
 
 * **Modelos de Texto**: Veja o arquivo `TEMPLATES.md` para sugestões de textos anti-rejeição e suporte a múltiplos lembretes.
-* **Desenvolvido por**: HubApp / Launcher & Co.
+* **Desenvolvido por**: HubApp / Launcher Tecnologia.
 * **Suporte**: [licencas.digital](https://licencas.digital)
