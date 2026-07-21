@@ -1,7 +1,7 @@
 <?php
 /**
  * HubApp WABA WHMCS (API Oficial Meta)
- * @author     Launcher
+ * @author     Launcher Tecnologia
  * @version    1.2.0 (Auto-Login Support)
  */
 
