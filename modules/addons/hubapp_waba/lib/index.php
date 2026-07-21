@@ -1,7 +1,7 @@
 <?php
 /**
  * HubApp WABA WHMCS - Arquivo de Segurança
- * @author     Launcher
+ * @author     Launcher Tecnologia
  */
 
 // Redireciona qualquer acesso direto para a home do WHMCS
