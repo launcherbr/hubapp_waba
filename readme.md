@@ -60,7 +60,7 @@ As variáveis `{{n}}` cadastradas na Meta receberão os seguintes dados vindos d
 >
 > Garanta mais credibilidade e segurança para o seu sistema por apenas **R$ 250,00 anuais**.
 >
-> [**👉 CLIQUE AQUI PARA CONTRATAR AGORA**](https://licencas.digital/store/whmcs/whmcs-validado)
+> [**👉 CLIQUE AQUI PARA CONTRATAR AGORA**](https://licencas.digital/store/whmcs/whmcs-verificado)
 
 ---
 
