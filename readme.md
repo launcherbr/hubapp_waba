@@ -67,5 +67,5 @@ As variáveis `{{n}}` cadastradas na Meta receberão os seguintes dados vindos d
 ## 🆘 Suporte e Documentação de Modelos
 
 * **Modelos de Texto**: Veja o arquivo `TEMPLATES.md` para sugestões de textos anti-rejeição e suporte a múltiplos lembretes.
-* **Desenvolvido por**: HubApp / Launcher Tecnologia.
+* **Desenvolvido por**: HubApp / Launcher Tech.
 * **Suporte**: [licencas.digital](https://licencas.digital)
